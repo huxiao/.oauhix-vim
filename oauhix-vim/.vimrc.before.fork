@@ -1,0 +1,58 @@
+" spf13 configuration
+"-------------------------
+" 配置窗口自动最大化功能快捷键：不使用默认键，在.vimrc.fork中定义新键
+let g:spf13_no_easyWindows = 1
+" 关闭当前目录自动切换功能
+let g:spf13_no_autochdir = 1
+let g:ctrlp_working_path_mode = 0
+" 注意另需在.vimrc.fork中关闭ctrlp的自动目录切换功能ctrlp_working_path_mode
+
+" aireline configuration
+"------------------------------
+" 启动时使用unicode字体符号装饰界面
+let g:airline_powerline_fonts=1
+
+" vimwiki configuration
+"----------------------
+let wiki_1 = {}
+let wiki_1.path = '~/Dropbox/vimwiki/'
+let wiki_1.path_html = '~/.vimwiki/html/'
+let wiki_1.template_path = '~/Dropbox/vimwiki/template/'
+let wiki_1.template_default = 'default_template'
+let wiki_1.template_ext = '.html'
+let wiki_1.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+
+let wiki_2 = {}
+let wiki_2.path = '~/Dropbox/vimmkd/'
+let wiki_2.path_html = '~/Dropbox/vimmkd/html/'
+let wiki_2.syntax = 'markdown'
+let wiki_2.ext = '.md'
+let wiki_2.template_path = '~/Dropbox/vimmkd/template/'
+let wiki_2.template_default = 'default_template'
+let wiki_2.template_ext = '.html'
+let wiki_2.custom_wiki2html = '/home/huxiao/.vim/bundle/vimwiki/autoload/vimwiki/customwiki2html.sh'
+
+let g:vimwiki_list = [wiki_1, wiki_2]
+autocmd FileType vimwiki setlocal wrap
+
+" tagbar configuration
+"---------------------
+let g:tagbar_type_vimwiki = {
+    \   'ctagstype':'vimwiki'
+    \ , 'kinds':['h:header']
+    \ , 'sro':'&&&'
+    \ , 'kind2scope':{'h':'header'}
+    \ , 'sort':0
+    \ , 'ctagsbin':'~/.oauhix-vim/oauhix-vim/others/vwtags.py'
+    \ , 'ctagsargs': 'default'
+\ }
+
+
+" ycm configuration
+"let g:spf13_bundle_groups=['general', 'writing', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+if $MYCOMPLETE == 'youcompleteme'
+    let g:spf13_bundle_groups=['general', 'writing', 'youcompleteme', 'programming', 'python', 'misc',]
+else
+    let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'python', 'misc',]
+endif
+

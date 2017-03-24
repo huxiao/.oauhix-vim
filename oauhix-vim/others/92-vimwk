@@ -1,0 +1,4 @@
+#!/bin/sh
+
+pgrep -f autogitpush.sh || ~/.oauhix-vim/oauhix-vim/others/autogitpush.sh &
+pgrep -f autogitpull.sh || ~/.oauhix-vim/oauhix-vim/others/autogitpull.sh &

@@ -1,0 +1,51 @@
+"3.8.1 (created: 2013/11/21 23:49:14)
+
+let mapleader = ','
+
+"设置导航按键
+noremap j 6j
+noremap k 6k
+noremap d <C-d>
+noremap e <C-u>
+"noremap <silent> l :buffer!<space>
+noremap x d
+noremap \\ d
+noremap v F
+noremap <F1> <C-p>
+noremap <F2> <C-n>
+noremap <leader>sa :tab addons<CR>
+noremap <leader>sd :tab downloads<CR>
+noremap <leader>sp :tab preferences<CR>
+noremap h <C-p>
+noremap l <C-n>
+
+noremap <leader>gx :set gui=none<CR>
+noremap <leader>gl :set gui=navigation<CR>
+noremap <leader>ss :source ~/.vimperatorrc<CR>
+
+"设置链接选定键
+set hintchars=asdfgqwertzxcvb
+
+"设置上下一页的正则模式
+set nextpattern=\\s*下一页\\s*,\\s*下一章\\s*,^翻下页$,^下页$,\bnext\b,^>$,^(>>|»)$,^(>|»),(>|»)$,\bmore\b
+set previouspattern=\\bprev|previous\\b,^<$,^(<<|«)$,^(<|«),(<|«)$,^一页$,\\s*上一章\\s*,\\s*上一页\\s*,^翻上页$,^上页$
+
+"设置界面布局和界面开关热键
+set gui=none
+set noscrollbars
+
+"QMarks
+silent qmark g http://github.com
+silent qmark j http://t.jd.com/home/follow
+silent qmark p https://plus.google.com
+silent qmark z http://www.zhihu.com
+silent qmark t http://translate.google.cn/#en/zh-CN/
+silent qmark i http://buyer.trade.taobao.com/trade/itemlist/list_bought_items.htm
+silent qmark d https://www.dida365.com/#q/all/today
+
+
+noremap <leader>tabs :tabopen ~/docs/abs-3.9.1_cn/html/index.html<CR>
+
+source! /home/huxiao/.vimperatorrc.local
+
+" vim: set ft=vimperator:

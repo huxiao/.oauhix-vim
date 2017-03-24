@@ -1,0 +1,22 @@
+" Programming
+    Bundle 'huxiao/cscope.vim'
+    Bundle 'huxiao/cscope_macros'
+    Bundle 'vim-scripts/bufexplorer.zip'
+    Bundle 'rdnetto/YCM-Generator'
+" Editing
+    Bundle 'vimwiki/vimwiki'
+    Bundle 'mattn/calendar-vim'
+    Bundle 'lervag/vimtex'
+    Bundle 'lfv89/vim-interestingwords'
+" Browser
+    Bundle 'superbrothers/vim-vimperator'
+" fcitx input
+    "Bundle 'lilydjwg/fcitx.vim'
+
+" UnBundle命令由.vimrc.bundles提供，调用vundle接口包装而成。该代码漏掉了g:bundles的定义，暂替补之。
+if !exists("g:bundles")
+    let g:bundles = g:vundle#bundles
+endif
+
+"UnBundles
+    "UnBundle 'foo/bar'

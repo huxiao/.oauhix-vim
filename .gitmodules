@@ -1,0 +1,6 @@
+[submodule "submodules/markdown2ctags"]
+	path = submodules/markdown2ctags
+	url = https://github.com/jszakmeister/markdown2ctags.git
+[submodule "spf13-vim"]
+	path = spf13-vim
+	url = https://github.com/spf13/spf13-vim.git

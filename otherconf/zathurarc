@@ -1,0 +1,7 @@
+map D toggle_page_mode
+map e scroll half-up
+map d scroll half-down
+map [normal] ,p1 set "pages-per-row 1"
+map [normal] ,p2 set "pages-per-row 2"
+
+" vim: ft=vim

@@ -1,0 +1,50 @@
+" 设置默认打开程序
+" vifm特定的文件类型缺省打开程序，为那些没有.desktop的程序提供方便
+" 若是不使用其它文件管理器，都在这儿加倒是清晰方便
+filetype *.jpg,*.jpeg,*.png sxiv %f 2>/dev/null &
+filetype *.rmvb,*.rm,*.flv,*.mkv,*.mp4 baka-mplayer %f 2>/dev/null &
+filetype *.pdf zathura %f 2>/dev/null &
+filetype *.mm freemind %f:p 2>/dev/null &
+
+" 将vifm没有特别指定的文件类型的缺省打开处理移交给xdg-open
+" xdg-open的默认打开方式由.local/share/applications/mimeapps.list决定
+" 用户可以手工编辑关联或者用xdg-mime default application mimetype指定关联
+filetype *.* xdg-open %f 2>/dev/null &
+
+" 颜色主题
+colorscheme solarized-dark
+windo set number
+windo set relativenumber
+
+" yank current directory path into the clipboard
+nnoremap yd :!echo -n %d | xclip %i<cr>
+" yank current file path into the clipboard
+nnoremap yf :!echo -n %c:p | xclip %i<cr>
+" yank current filename without path into the clipboard
+nnoremap yn :!echo -n %c | xclip %i<cr>
+" yank current filename without last extension into the clipboard
+nnoremap yN :!echo -n %c:r | xclip %i<cr>
+
+" 热键定义
+" 重载vifmrc
+map ,ss :source ~/.vifm/vifmrc<CR>
+
+" 查询当前文件的mime类型
+map ,mt :!!xdg-mime query filetype %f<CR>
+
+" 直接删除当前文件(不使用回收站)，需等待回车确认
+map ,dd :!rm -rf %f
+
+" 移动文件到另一侧(不使用回收站)
+map ,mv :!mv %f %D &<CR>
+
+" 显示进度的复制文件到另一侧
+map ,cp :!xfce4-terminal -e "rsync -r --progress %f %D"<CR>
+
+" 在当前目录下打开终端
+map <A-l> :!xfce4-terminal --working-directory=%d<CR>
+
+" q键快捷推出，以配合终端下快捷v键进入
+map q :q<CR>
+
+" vim:ft=vim
