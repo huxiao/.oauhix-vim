@@ -43,9 +43,12 @@ silent qmark t http://translate.google.cn/#en/zh-CN/
 silent qmark i http://buyer.trade.taobao.com/trade/itemlist/list_bought_items.htm
 silent qmark d https://www.dida365.com/#q/all/today
 
-
+"Shortcuts
+noremap <leader>oabs :open ~/docs/abs-3.9.1_cn/html/index.html<CR>
 noremap <leader>tabs :tabopen ~/docs/abs-3.9.1_cn/html/index.html<CR>
+noremap <leader>oxq :open https://xueqiu.com<CR>
+noremap <leader>txq :tabopen https://xueqiu.com<CR>
 
-source! /home/huxiao/.vimperatorrc.local
+source! ~/.vimperatorrc.local
 
 " vim: set ft=vimperator:
