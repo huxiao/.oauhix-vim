@@ -1,0 +1,78 @@
+{
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        }
+    ],
+    "vim.leader": ",",
+    "vim.handleKeys":{
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-k>": false,
+        "<S-A>": false
+    },
+    "vim.statusBarColorControl": true,
+        "vim.statusBarColors" : {
+            "normal": "#007acc",
+            "insert": "#018055",
+            "visual": "#5f00af",
+            "visualline": "#005f87",
+            "visualblock": "#86592d",
+            "replace": "#cc0044"
+        },
+
+    "terminal.integrated.shell.windows":"C:\\cygwin64\\bin\\bash.exe",
+    "terminal.integrated.env.windows": { "CHERE_INVOKING": "1" },
+    "terminal.integrated.shellArgs.windows": [ "--login" ],
+
+    "window.openFilesInNewWindow": "on",
+    "editor.minimap.enabled": false,
+
+    "editor.detectIndentation": false,
+    "editor.renderControlCharacters": false,
+    "editor.renderWhitespace": "none",
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#007acc",
+        "statusBar.noFolderBackground": "#007acc",
+        "statusBar.debuggingBackground": "#007acc"
+    },
+    "gitlens.keymap": "alternate",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.presets.jsOfficial": true,
+    "vsicons.presets.jsonOfficial": true,
+    "vsicons.projectDetection.autoReload": true
+}
