@@ -55,14 +55,8 @@
     "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": true,
     "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
         "suppressResultsExplorerNotice": true,
-        "suppressUpdateNotice": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressWelcomeNotice": true
     },
     "workbench.colorCustomizations": {
@@ -70,9 +64,14 @@
         "statusBar.noFolderBackground": "#007acc",
         "statusBar.debuggingBackground": "#007acc"
     },
-    "gitlens.keymap": "alternate",
+    "gitlens.keymap": "chorded",
     "workbench.iconTheme": "vscode-icons",
     "vsicons.presets.jsOfficial": true,
     "vsicons.presets.jsonOfficial": true,
-    "vsicons.projectDetection.autoReload": true
+    "vsicons.projectDetection.autoReload": true,
+    "gitlens.historyExplorer.enabled": true,
+
+    "bookmarks.navigateThroughAllFiles": true,
+
+    "explorer.sortOrder": "type"
 }
